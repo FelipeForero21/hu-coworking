@@ -41,6 +41,6 @@ CREATE TABLE Sesiones (
     hora_fin TIMESTAMP NOT NULL,
     FOREIGN KEY (reservas_de_espacios_de_trabajo_id) REFERENCES Reservas_de_Espacios_de_Trabajo(id),
     FOREIGN KEY (espacio_trabajo_id) REFERENCES Espacios_de_Trabajo(id),
-    FOREIGN KEY (usuario_id) REFERENCES Usuarios(id)
-    
+    FOREIGN KEY (usuario_id) REFERENCES Usuarios(id) 
 ); 
+
