@@ -20,7 +20,7 @@ FROM Espacios_de_Trabajo et
 JOIN Usuarios u ON (et.id % 100 + 1) = u.id
 LIMIT 100;
 
--- Poblamiento de la tabla Sesiones con 100 registros
+-- Poblamiento de la tabla Sesiones con 100 
 INSERT INTO Sesiones (reservas_de_espacios_de_trabajo_id, espacio_trabajo_id, usuario_id, hora_inicio, hora_fin)
 SELECT ret.id, et.id, u.id, current_timestamp, current_timestamp + interval '2 hours'
 FROM Reservas_de_Espacios_de_Trabajo ret
